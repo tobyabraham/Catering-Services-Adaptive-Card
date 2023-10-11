@@ -1,0 +1,183 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Catering Services",
+                                    "wrap": true,
+                                    "size": "Large",
+                                    "weight": "Bolder"
+                                }
+                            ],
+                            "horizontalAlignment": "Center",
+                            "verticalContentAlignment": "Center"
+                        }
+                    ]
+                }
+            ],
+            "style": "accent"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Catering Selection",
+            "size": "Medium",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Please select prefered catering options",
+            "wrap": true,
+            "spacing": "Small"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.ShowCard",
+            "title": "Catering Option 1",
+            "card": {
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                        "type": "Container",
+                        "items": [
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "width": "auto",
+                                        "items": [
+                                            {
+                                                "type": "Image",
+                                                "url": "https://www.pngitem.com/pimgs/m/298-2980538_grill-in-and-out-mongolian-bowl-nigeria-food.png",
+                                                "size": "Large"
+                                            }
+                                        ],
+                                        "height": "stretch"
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": "stretch",
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "text": "Catering Option 1",
+                                                "wrap": true,
+                                                "weight": "Bolder"
+                                            },
+                                            {
+                                                "type": "FactSet",
+                                                "facts": [
+                                                    {
+                                                        "title": "Description:",
+                                                        "value": "Brief description of catering option."
+                                                    },
+                                                    {
+                                                        "title": "Dietary Info:",
+                                                        "value": "Vegetarian, gluten free"
+                                                    },
+                                                    {
+                                                        "title": "Price:",
+                                                        "value": "6000"
+                                                    }
+                                                ],
+                                                "spacing": "Small"
+                                            },
+                                            {
+                                                "type": "Input.Number",
+                                                "placeholder": "",
+                                                "id": "no",
+                                                "label": "Number of Attendees",
+                                                "spacing": "Small"
+                                            },
+                                            {
+                                                "type": "Input.Text",
+                                                "placeholder": "",
+                                                "label": "Dietary Requirement",
+                                                "id": "dreq",
+                                                "spacing": "Small"
+                                            },
+                                            {
+                                                "type": "ActionSet",
+                                                "actions": [
+                                                    {
+                                                        "type": "Action.Execute",
+                                                        "title": "Add to Booking",
+                                                        "style": "positive"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        },
+        {
+            "type": "Action.ShowCard",
+            "title": "Catering Option 2",
+            "card": {
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                        "type": "Input.Toggle",
+                        "id": "ChickenAllergy",
+                        "valueOn": "noPeanuts",
+                        "valueOff": "peanuts",
+                        "title": "I'm allergic to peanuts",
+                        "label": "Do you have any allergies?"
+                    },
+                    {
+                        "type": "Input.Text",
+                        "id": "ChickenOther",
+                        "isMultiline": true,
+                        "label": "Any other preparation requests?"
+                    }
+                ],
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        },
+        {
+            "type": "Action.ShowCard",
+            "title": "Catering Option 3",
+            "card": {
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                        "type": "Input.Toggle",
+                        "id": "Vegetarian",
+                        "title": "Please prepare it vegan",
+                        "label": "Would you like it prepared vegan?",
+                        "valueOn": "vegan",
+                        "valueOff": "notVegan"
+                    },
+                    {
+                        "type": "Input.Text",
+                        "id": "VegOther",
+                        "isMultiline": true,
+                        "label": "Any other preparation requests?"
+                    }
+                ],
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        }
+    ]
+}
