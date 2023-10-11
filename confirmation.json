@@ -1,0 +1,97 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "horizontalAlignment": "Center",
+                            "verticalContentAlignment": "Center",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Catering Services",
+                                    "wrap": true,
+                                    "size": "Large",
+                                    "weight": "Bolder",
+                                    "horizontalAlignment": "Center"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "style": "accent"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Please confirm your order:",
+            "wrap": true
+        },
+        {
+            "type": "FactSet",
+            "facts": [
+                {
+                    "title": "Name",
+                    "value": "John Smith"
+                },
+                {
+                    "title": "Room",
+                    "value": "101"
+                },
+                {
+                    "title": "Event Date",
+                    "value": "1/11/2023"
+                },
+                {
+                    "title": "Catering Preference",
+                    "value": "Refreshment"
+                }
+            ],
+            "spacing": "Small"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "FactSet",
+                    "facts": [
+                        {
+                            "title": "10",
+                            "value": "Tea"
+                        },
+                        {
+                            "title": "10",
+                            "value": "Snacks"
+                        },
+                        {
+                            "title": "4",
+                            "value": "Coffee"
+                        }
+                    ],
+                    "spacing": "None",
+                    "separator": true
+                }
+            ],
+            "spacing": "Small"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Execute",
+            "title": "Place Order"
+        },
+        {
+            "type": "Action.Execute",
+            "title": "Edit Order",
+            "data": "edit"
+        }
+    ]
+}
