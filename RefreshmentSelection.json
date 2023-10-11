@@ -1,0 +1,134 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Catering Services",
+                    "wrap": true,
+                    "horizontalAlignment": "Center",
+                    "size": "Large",
+                    "weight": "Bolder"
+                }
+            ],
+            "style": "accent"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Refreshments",
+            "size": "Medium",
+            "weight": "Bolder",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Please Select Refreshment Preference",
+            "wrap": true
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.ShowCard",
+            "title": "Tea",
+            "card": {
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                        "type": "Input.Text",
+                        "placeholder": "",
+                        "label": "Enter no. of attendees",
+                        "id": "ter"
+                    },
+                    {
+                        "type": "Input.Text",
+                        "id": "SteakOther",
+                        "isMultiline": true,
+                        "label": "Any other preparation requests?"
+                    }
+                ],
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        },
+        {
+            "type": "Action.ShowCard",
+            "title": "Coffee",
+            "card": {
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                        "type": "Input.Toggle",
+                        "id": "ChickenAllergy",
+                        "valueOn": "noPeanuts",
+                        "valueOff": "peanuts",
+                        "title": "I'm allergic to peanuts",
+                        "label": "Do you have any allergies?"
+                    },
+                    {
+                        "type": "Input.Text",
+                        "id": "ChickenOther",
+                        "isMultiline": true,
+                        "label": "Any other preparation requests?"
+                    }
+                ],
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        },
+        {
+            "type": "Action.ShowCard",
+            "title": "Snacks",
+            "card": {
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                        "type": "Input.Toggle",
+                        "id": "Vegetarian",
+                        "title": "Please prepare it vegan",
+                        "label": "Would you like it prepared vegan?",
+                        "valueOn": "vegan",
+                        "valueOff": "notVegan"
+                    },
+                    {
+                        "type": "Input.Text",
+                        "id": "VegOther",
+                        "isMultiline": true,
+                        "label": "Any other preparation requests?"
+                    }
+                ],
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        },
+        {
+            "type": "Action.ShowCard",
+            "title": "Others",
+            "card": {
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                        "type": "Input.Text",
+                        "placeholder": "",
+                        "label": "Specify items here",
+                        "id": "ghfh",
+                        "isMultiline": true
+                    },
+                    {
+                        "type": "Input.Text",
+                        "placeholder": "",
+                        "label": "Enter no. of attendees",
+                        "id": "kjk"
+                    },
+                    {
+                        "type": "Input.Text",
+                        "id": "VegOther1",
+                        "isMultiline": true,
+                        "label": "Any other preparation requests?"
+                    }
+                ],
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+            }
+        }
+    ]
+}
